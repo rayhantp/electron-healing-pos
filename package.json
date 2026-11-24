@@ -1,0 +1,43 @@
+{
+  "name": "healing-pos-desktop",
+  "version": "2.0.1",
+  "description": "All-in-One Desktop Cashier & Fingerprint System for Healing POS",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.healingpos.desktop",
+    "productName": "Healing POS Desktop",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "extraResources": [
+      {
+        "from": "resources/python-win",
+        "to": "python-win",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "resources/engine",
+        "to": "engine",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "author": "Healing Team",
+  "license": "ISC"
+}

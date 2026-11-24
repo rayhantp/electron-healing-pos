@@ -1,0 +1,16 @@
+node_modules/
+dist/
+staging/
+extracted_original/
+public_share/
+resources/python-win/
+**/__pycache__/
+*.pyc
+*.exe
+*.asar
+*.zip
+.env
+.env.*
+!.env.example
+settings.json
+*.log
